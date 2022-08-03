@@ -13,8 +13,10 @@ run: build
 		-it \
 		flared.io/oso-arm \
 		bash -c '\
-			cd /build \
+			cd /opt/build \
 			&& git clone https://github.com/osohq/oso.git \
 			&& cd oso \
+			&& git checkout v0.26.1 \
 			&& make python-build \
+			&& make -C languages/python/oso package \
 		'
