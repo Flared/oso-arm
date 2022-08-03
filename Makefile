@@ -20,3 +20,12 @@ run: build
 			&& make python-build \
 			&& make -C languages/python/oso package \
 		'
+
+.PHONY: venv
+venv:
+	python3 -m venv venv
+	venv/bin/pip install twine
+
+.PHONY: clean
+clean:
+	rm -rf venv build
