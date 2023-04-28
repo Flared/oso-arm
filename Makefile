@@ -16,7 +16,7 @@ run: build
 			cd /opt/build \
 			&& git clone https://github.com/osohq/oso.git \
 			&& cd oso \
-			&& git checkout v0.26.1 \
+			&& git checkout v0.27.0 \
 			&& make python-build \
 			&& make -C languages/python/oso package \
 		'
